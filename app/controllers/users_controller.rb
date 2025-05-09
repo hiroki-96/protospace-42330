@@ -3,4 +3,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @prototypes = @user.prototypes
   end
+
+  validates :name, :profile, :occupation, :position, presence: true
+
 end
+
